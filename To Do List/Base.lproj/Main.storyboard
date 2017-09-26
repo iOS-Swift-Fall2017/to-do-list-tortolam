@@ -22,12 +22,28 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="JrS-Nj-m9T">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Vlp-kf-bdW" detailTextLabel="Cml-xs-Q6O" style="IBUITableViewCellStyleSubtitle" id="JrS-Nj-m9T">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JrS-Nj-m9T" id="dl6-As-HwH">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vlp-kf-bdW">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cml-xs-Q6O">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="Bae-b2-bjL" kind="show" identifier="EditItem" id="yBR-dq-fXT"/>
@@ -69,16 +85,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Do Item:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eu4-2q-s7w">
-                                <rect key="frame" x="16" y="64" width="343" height="39"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Do Item:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eu4-2q-s7w">
+                                <rect key="frame" x="16" y="87" width="343" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter To Do Item Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VUk-vq-Xvx">
-                                <rect key="frame" x="16" y="111" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8g-xi-8sY">
+                                <rect key="frame" x="16" y="172" width="343" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter To Do Item Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VUk-vq-Xvx">
+                                <rect key="frame" x="16" y="134" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -86,8 +106,28 @@
                                     <action selector="toDoFieldChanged:" destination="Bae-b2-bjL" eventType="editingChanged" id="Cdr-Ih-JgO"/>
                                 </connections>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BQx-zn-sYE">
+                                <rect key="frame" x="16" y="219" width="343" height="406"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xt2-nK-Sy2" firstAttribute="trailing" secondItem="eu4-2q-s7w" secondAttribute="trailing" constant="16" id="3IU-vw-Zet"/>
+                            <constraint firstItem="eu4-2q-s7w" firstAttribute="leading" secondItem="Xt2-nK-Sy2" secondAttribute="leading" constant="16" id="4Fy-fA-o5r"/>
+                            <constraint firstItem="Xt2-nK-Sy2" firstAttribute="trailing" secondItem="BQx-zn-sYE" secondAttribute="trailing" constant="16" id="FxK-js-Vun"/>
+                            <constraint firstItem="X8g-xi-8sY" firstAttribute="leading" secondItem="Xt2-nK-Sy2" secondAttribute="leading" constant="16" id="GTy-E5-Tet"/>
+                            <constraint firstItem="BQx-zn-sYE" firstAttribute="top" secondItem="X8g-xi-8sY" secondAttribute="bottom" constant="14.5" id="GyT-Sh-tBa"/>
+                            <constraint firstItem="eu4-2q-s7w" firstAttribute="top" secondItem="Xt2-nK-Sy2" secondAttribute="top" constant="23" id="RiU-m3-VJg"/>
+                            <constraint firstItem="X8g-xi-8sY" firstAttribute="top" secondItem="VUk-vq-Xvx" secondAttribute="bottom" constant="8" id="TEc-Vo-5uM"/>
+                            <constraint firstItem="BQx-zn-sYE" firstAttribute="leading" secondItem="Xt2-nK-Sy2" secondAttribute="leading" constant="16" id="VeA-dD-7Fc"/>
+                            <constraint firstItem="Xt2-nK-Sy2" firstAttribute="trailing" secondItem="X8g-xi-8sY" secondAttribute="trailing" constant="16" id="aa6-ox-AKg"/>
+                            <constraint firstItem="VUk-vq-Xvx" firstAttribute="leading" secondItem="Xt2-nK-Sy2" secondAttribute="leading" constant="16" id="kQq-do-gkP"/>
+                            <constraint firstItem="Xt2-nK-Sy2" firstAttribute="trailing" secondItem="VUk-vq-Xvx" secondAttribute="trailing" constant="16" id="oko-gB-0FZ"/>
+                            <constraint firstItem="VUk-vq-Xvx" firstAttribute="top" secondItem="eu4-2q-s7w" secondAttribute="bottom" constant="14.5" id="s9a-5I-7NZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Xt2-nK-Sy2"/>
                     </view>
                     <navigationItem key="navigationItem" id="Z5X-ME-upr">
@@ -105,12 +145,13 @@
                     <connections>
                         <outlet property="saveBarButton" destination="3og-Ct-w5j" id="qBp-GG-75S"/>
                         <outlet property="toDoField" destination="VUk-vq-Xvx" id="5iK-uT-RaX"/>
+                        <outlet property="toDoNoteView" destination="BQx-zn-sYE" id="ugl-75-Q6O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXB-7T-dI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="9tg-5H-rVT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2212" y="133"/>
+            <point key="canvasLocation" x="2212" y="132.68365817091455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gi2-5K-0nb">
